@@ -114,6 +114,10 @@ function Header() {
 									</button>
 								</>
 							}
+							<Link to="/login" className="p-2 transition hover:text-blue-600 hover:underline">
+								<i className="fa-solid fa-user-plus mx-1"></i>
+								| App
+							</Link>
 						</div>
 
 						{/* Mobile Menu Button */}
