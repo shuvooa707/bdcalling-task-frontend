@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    scroll-behavior: smooth;
+}
+
+
+.div[class*='kursor'].kursor--1 {
+    position: fixed;
+    width: 40px!important;
+    height: 40px!important;
+    /*border: 1px solid var(--primary);*/
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .15s;
+    z-index: 999;
+    mix-blend-mode: difference;
+}
+
+
+@keyframes wcLoading {
+    0% {
+        transform: scaleY(.1);
+        background: white
+    }
+
+    50% {
+        transform: scaleY(1);
+        background: #c9f31d;
+    }
+
+    to {
+        transform: scaleY(.1);
+        background: transparent
+    }
+}
+
+.preloader {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2
+}
+
+.loading .bar {
+    width: 6px;
+    height: 60px;
+    background: white;
+    display: inline-block;
+    transform-origin: bottom center;
+    animation: wcLoading 1.5s ease-in-out infinite
+}
+
+.loading .bar1 {
+    animation-delay: .1s
+}
+
+.loading .bar2 {
+    animation-delay: .2s
+}
+
+.loading .bar3 {
+    animation-delay: .3s
+}
+
+.loading .bar4 {
+    animation-delay: .4s
+}
+
+.loading .bar5 {
+    animation-delay: .5s
+}
+
+.loading .bar6 {
+    animation-delay: .6s
+}
+
+.loading .bar7 {
+    animation-delay: .7s
+}
+
+.loading .bar8 {
+    animation-delay: .8s
+}
+
+
+/* custom CSS */
+.input-field-error {
+    border: 1px solid red!important;
+}
